@@ -1,7 +1,8 @@
 
 # Agenda
 
-[0. Release information and Topology](#0. Release information and Topology).
+[0. Release information and Topology](#0-release-information-and-topology)
+
 1. ZTP Satellite provisioning procedure 
 2. esat ports in VPRN as SAP.
 3. Logging and Alarms of Satellite and esat ports
@@ -11,7 +12,7 @@
 7. Qos - Scheduling Traffic correctly
    
 
-# 0. Release information and Topology
+# 0.Release information and Topology
 
 ![Alt text](topology1.png)
 
