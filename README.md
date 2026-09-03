@@ -12,6 +12,8 @@
 
 # 0. Release information and Topology
 
+
+
 # 1. ZTP Satellite provisioning procedure 
 ## Prerequisites
 - Compact flash with the ZTP software kit for the 7250 IXR chassis
