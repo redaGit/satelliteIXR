@@ -30,7 +30,10 @@
 - power on the 7250 IXR chassis.
 - Obtain the MAC address from the 7250 IXR.
 - Configure a software repository containing the IXR images (the example are on the following slides).
-- Configure and enable the satellite on the host (the examples are on the following slides).
+- Configure and enable the satellite on the host
+  ```
+  configure satellite ethernet-satellite
+  ```
 - Configure and enable the satellite uplinks (breakout, RS-FEC, and admin status enabled) and establish   the port-topology for the uplink-to-host port (the examples are on the following slides).
 
 # 2. esat ports in VPRN as SAP
