@@ -12,7 +12,7 @@
 7. Qos - Scheduling Traffic correctly
    
 
-# 0.Release information and Topology
+# 0. Release information and Topology
 
 ![Alt text](topology1.png)
 
