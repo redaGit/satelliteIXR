@@ -7,9 +7,10 @@
 4. Qos – Buffer Allocation with various shaping rates.
 5. Qos - Shaping of esat ports
 6. Qos - ACL Egress FC Classification.
-7. Qos - Scheduling Traffic correctly.
+7. Qos - Scheduling Traffic correctly
+   
 
-0. Release information and Topology
+# 0. Release information and Topology
 
 # 1. ZTP Satellite provisioning procedure 
 ## Prerequisites
