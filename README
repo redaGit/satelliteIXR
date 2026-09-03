@@ -1,1 +1,10 @@
 
+# Agenda
+
+1. Test ZTP Satellite Integration to 7750-SR-2s.
+2. Show esat ports in VPRN as SAP.
+3. Test Logging and Alarms of Satellite and esat ports
+4. Qos Testing – Buffer Allocation with various shaping rates.
+5. Qos Testing- Shaping of esat ports
+6. Qos Testing- ACL Egress FC Classification.
+7. Qos Testing- Scheduling Traffic correctly.
