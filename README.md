@@ -33,6 +33,12 @@
 - Configure and enable the satellite on the host (the examples are on the following slides).
 - Configure and enable the satellite uplinks (breakout, RS-FEC, and admin status enabled) and establish   the port-topology for the uplink-to-host port (the examples are on the following slides).
 
+# 2. esat ports in VPRN as SAP.
+# 3. Logging and Alarms of Satellite and esat ports
+# 4. Qos – Buffer Allocation with various shaping rates.
+# 5. Qos - Shaping of esat ports
+# 6. Qos - ACL Egress FC Classification.
+# 7. Qos - Scheduling Traffic correctly
 
 
 
