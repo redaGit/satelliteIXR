@@ -12,6 +12,7 @@
 
 # 0. Release information and Topology
 
+![Alt text](topology1.png)
 
 
 # 1. ZTP Satellite provisioning procedure 
