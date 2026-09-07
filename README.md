@@ -74,6 +74,23 @@ software-repository "IXR-s-25.10.R7" {
 ....
 
 ```
+under cf3:\
+
+```
+file list cf3:\IXR-S-Satellite
+...
+Directory of cf3:\IXR-S-Satellite
+
+01/27/2021  04:14p      <DIR>          ./
+01/27/2021  04:14p      <DIR>          ../
+08/12/2026  08:51p           508598544 cpm.tim
+08/12/2026  08:47p           348007168 iom.tim
+08/12/2026  08:47p           185567392 kernel.tim
+08/12/2026  08:50p           829771792 support.tim
+               4 File(s)             2628955382 bytes.
+               2 Dir(s)              2860752896 bytes free.
+```
+
 
 Once ZTP completes
 ```
