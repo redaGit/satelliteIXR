@@ -34,7 +34,11 @@
   ```
   configure satellite ethernet-satellite
   ```
-- Configure and enable the satellite uplinks (breakout, RS-FEC, and admin status enabled) and establish   the port-topology for the uplink-to-host port (the examples are on the following slides).
+- Configure and enable the satellite uplinks (breakout, RS-FEC, and admin status enabled) and establish   the port-topology for the uplink-to-host port.
+
+Note: for testing ZTP, we will be using second satellite (see below diagram) 
+
+![Alt text](topology2.png)
 
 # 2. esat ports in VPRN as SAP
 
