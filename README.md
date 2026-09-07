@@ -38,7 +38,7 @@
 
 Note: for testing ZTP, we will be using second satellite (see below diagram) 
 
-![Alt text](topology2.png)
+![Alt text](topology2.jpeg)
 
 # 2. esat ports in VPRN as SAP
 
