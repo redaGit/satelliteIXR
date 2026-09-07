@@ -43,7 +43,7 @@ Note: for testing ZTP, we will be using second satellite (see below diagram)
 
 ```
 
- pr)[/configure satellite]
+ [/configure satellite]
  A:admin@NS2250F5526# info
     ethernet-satellite 2 {
         admin-state enable
