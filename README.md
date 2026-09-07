@@ -63,10 +63,9 @@ Note: for testing ZTP, we will be using second satellite (see below diagram)
         far-end-port-id esat-2/1/c50/u1
     }
 ```
-
+Once ZTP completes
 ```
 
-Once ZTP completes
 A:admin@NS2250F5526# show system satellite eth-sat 2
 ===============================================================================
 Satellite Information
