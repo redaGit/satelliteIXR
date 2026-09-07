@@ -63,6 +63,18 @@ Note: for testing ZTP, we will be using second satellite (see below diagram)
         far-end-port-id esat-2/1/c50/u1
     }
 ```
+software-repository "IXR-s-25.10.R7" :
+```
+(pr)[/configure system]
+A:admin@NS2250F5526# info
+...
+
+software-repository "IXR-s-25.10.R7" {
+        primary-location "cf3:\IXR-S-Satellite"
+....
+
+```
+
 Once ZTP completes
 ```
 
