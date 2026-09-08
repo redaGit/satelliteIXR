@@ -488,16 +488,16 @@ The 7750-SR-2s with a satellite assigns the buffer allocation based on the sap-e
 
 ```
 
-Queue #	PIR	CIR	MBS 	CBS	cir-level	cir-weight
-Q1	PIR 100%	CIR 15%	MBS 100%	CBS 15%	4	15
-Q2	PIR 100%	CIR 20%	MBS 100%	CBS 20%	4	20
-Q3	PIR 100%	CIR 30%	MBS 100%	CBS 30%	4	30
-Q4	PIR 100%	CIR 5%	MBS 100%	CBS 5%	1	5
-Q5	PIR 100%	CIR 10%	MBS 100%	CBS 10%	4	10
-Q6	PIR 100%	CIR 10%	MBS 100%	CBS 10%	6	10
-Q7	PIR 100%	CIR 5%	MBS 100%	CBS 5%	4	5
-Q8	PIR 100%	CIR 5%	MBS 100%	CBS 5%	7	5
-
+| Queue #|	PIR     |	CIR    | MBS     |	CBS       |  cir-level  |	cir-weight     |
+|-------:|---------:|---------:|--------:|------------:|-------------:|---------------:|
+|Q1	   | PIR 100% |CIR 15%   | MBS 100%|	CBS 15%   |	 4           |	15             |                |
+|Q2	 | PIR 100% |	CIR 20%|MBS 100% |	CBS 20%|       |  4    |	20             |
+|Q3	 | PIR 100% |	CIR 30%|MBS 100% |	CBS 30%| 	 4    |	30             |
+|Q4	 | PIR 100% |	CIR 5% |MBS 100% |	CBS 5% |	 1    |	5              |
+|Q5	 | PIR 100% |	CIR 10%|MBS 100% |	CBS 10%|       	 4    |	10             |
+|Q6	 | PIR 100% |	CIR 10%|MBS 100% |	CBS 10%|       	 6    | 10             |
+|Q7	 | PIR 100% |	CIR 5% |MBS 100% |	CBS 5% |	 4    |	5              |
+|Q8	 | PIR 100% |	CIR 5% |MBS 100% |	CBS 5% |         7    |	5              |
 
 
 ```
@@ -538,7 +538,7 @@ Admin Burst Limit  : default            Oper Burst Limit : 6 KB
 Admin Burst FIR    : default            Oper Burst FIR   : 0 KB
 ===============================================================================
 ```
-**The above MBS is 123K. 123K x 8= 984, 984/10000= 98.4 msec. Queue 3 uses 30% of CBS. 123/40KB= 32%.**
+**The above output calculation 123K x 8= 984, 984/10000= 98.4 msec. Queue 3 uses 30% of CBS. 123/40KB= 32%.**
 
 ```
     /configure service vprn "testvprn1" interface "test2" ipv4 primary address 10.10.20.1
@@ -567,7 +567,7 @@ Admin Burst Limit  : default            Oper Burst Limit : 32 KB
 Admin Burst FIR    : default            Oper Burst FIR   : 0 KB
 =============================================================================== ==
 
-**The above output calculation 6144 x 8= 49,152, 49152/100000= 492 msecs. Queue 4 has a CBS percentage of 5%- 312/6144= 5%.**
+**The above output calculation 6144 x 8= 49,152, 49152/100000= 492 msecs. Queue 4 uses 5% of CBS. 312/6144= 5%.**
 
 ```
 
