@@ -589,7 +589,7 @@ Admin Burst FIR    : default            Oper Burst FIR   : 0 KB
 
 ```
 monitor qos scheduler-stats sap "esat-1/1/1:10" egress rate
-
+```
 At time t = 33 sec (Mode: Rate)
 - ------------------------------------------------------------------------------
 Egress Schedulers
@@ -650,6 +650,7 @@ top                                **22969**                  11989723
     ** Traffic from Ixia is sent at a rate of 105M.**
 ```
 monitor qos scheduler-stats sap "esat-1/1/2:30" egress rate
+```
 -- -----------------------------------------------------------------------------
 Egress Schedulers
 top                                **11498**                  6001766
@@ -659,10 +660,13 @@ At time t = 33 sec (Mode: Rate)
 -- -----------------------------------------------------------------------------
 Egress Schedulers
 top                                **11496**                  6001007
-
+```
 ```
 **The above calculation is 11496 pps. The IXIA is sending 522 byte packet plus there is 4 bytes added to each frame from the satellite. 11496 x 546(522 + 20 bytes + 4 bytes) x 8 = 50,223,264.**
 
+end
+
+```
 
 
 
