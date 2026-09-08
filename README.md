@@ -11,9 +11,9 @@
 
 [4. Qos – Buffer Allocation with various shaping rates](#4-qos--buffer-allocation-with-various-shaping-rates)
    
-[5. Qos - Shaping of esat ports](#5-qos-shaping-of-esat-ports)
+[5. Qos - Shaping of esat ports](#5-qos--shaping-of-esat-ports)
    
-[6. Qos - ACL Egress FC Classification](#6-qosacl-egress-fc-classification)
+[6. Qos - ACL Egress FC Classification](#6-qos--acl-egress-fc-classification)
 
 [7. Qos - Scheduling Traffic correctly](#7-qos–-scheduling-traffic-correctly)
    
