@@ -5,12 +5,18 @@
 
 [1. ZTP Satellite provisioning procedure](#1-ztp-satellite-provisioning-procedure)
 
-2. esat ports in VPRN as SAP.
+[2. esat ports in VPRN as SAP.](#2-esat-ports-in-VPRN-as-SAP)
+   
 [3. Logging and Alarms of Satellite and esat ports](#3-Logging-and-Alarms-of-Satellite)
-4. Qos – Buffer Allocation with various shaping rates
-5. Qos - Shaping of esat ports
-6. Qos - ACL Egress FC Classification.
-7. Qos - Scheduling Traffic correctly
+
+[4. Qos – Buffer Allocation with various shaping rates](#4-Qos–Buffer-Allocation-with-various-shaping-rates)
+   
+[5. Qos - Shaping of esat ports](#5-Qos-Shaping-of-esat-ports)
+   
+[6. Qos - ACL Egress FC Classification]
+
+[7. Qos - Scheduling Traffic correctly]
+   
    
 NOTE: This github does not replace NOKIA official documentation, please see the below NOKIA documentation for more details:
 (inset documentation link) 
@@ -39,7 +45,9 @@ NOTE: This github does not replace NOKIA official documentation, please see the 
 - Configure and enable the satellite uplinks (breakout, RS-FEC, and admin status enabled) and establish   the port-topology for the uplink-to-host port.
 
 [For more details, please consult Nokia Documentation](https://documentation.nokia.com/sr/25-10/7x50-shared/basic-system-configuration/system-management.html#basic-system-configurationprovision-ixr-satellite)
-Note: for testing ZTP, we will be using second satellite (see below diagram) 
+
+
+Note: for testing ZTP, we will be using a second satellite (see the below diagram) 
 
 ![Alt text](topology2.png)
 
