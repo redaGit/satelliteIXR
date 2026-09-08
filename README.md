@@ -49,6 +49,10 @@ NOTE: This github does not replace NOKIA official documentation, please see the 
 
 Note: for testing ZTP, we will be using a second satellite (see the below diagram) 
 
+Compatibility:
+Host SR OS Release 25.x supports 7250 IXR satellite image 23.x, 24.x, and 25.x.
+Host SR OS Release 26.x supports 7250 IXR satellite image 24.x, 25.x, and 26.x.
+
 ![Alt text](topology2.png)
 
 
