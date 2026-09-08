@@ -675,9 +675,9 @@ end
 
 # 6. Qos – ACL Egress FC Classification
  Egress classification with an egress ip-filter was performed with the following results.
-
-ip-filter
 ```
+ip-filter
+
 A:admin@NS2250F5526# info full-context
     /configure filter ip-filter "sat-testing-30-10" default-action accept
     /configure filter ip-filter "sat-testing-30-10" filter-id 300
@@ -717,9 +717,9 @@ A:admin@NS2250F5526# info full-context
    /configure service vprn "testvprn1" interface "test1" sap esat-1/1/1:10 egress filter ip "sat-testing"
    ```
 
+
+
 ```
-
-
 show service id 7000 sap "esat-1/1/1:10" stats
 
 
