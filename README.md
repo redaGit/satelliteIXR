@@ -491,7 +491,7 @@ The 7750-SR-2s with a satellite assigns the buffer allocation based on the sap-e
 | Queue #|	PIR     |	CIR    | MBS     |	CBS       |  cir-level  |	cir-weight     |
 |-------:|---------:|---------:|--------:|------------:|-------------:|---------------:|
 |Q1	   | PIR 100% |CIR 15%   | MBS 100%|	CBS 15%   |	 4           |	15             |                |
-|Q2	 | PIR 100% |	CIR 20%|MBS 100% |	CBS 20%|     |  4           |	20             |
+|Q2	 | PIR 100% |	CIR 20%|MBS 100% |	CBS 20%       |  4          |             |	20             |
 |Q3	 | PIR 100% |	CIR 30%|MBS 100% |	CBS 30%| 	 4    |	30             |
 |Q4	 | PIR 100% |	CIR 5% |MBS 100% |	CBS 5% |	 1    |	5              |
 |Q5	 | PIR 100% |	CIR 10%|MBS 100% |	CBS 10%|       	 4    |	10             |
