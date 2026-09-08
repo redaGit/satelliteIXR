@@ -785,6 +785,14 @@ Dro. In/InplusProf    : 770895                  402407190
 
 
 # 7. Qos – Scheduling Traffic correctly
+The following test was performed to show that the scheduler is working correctly with satellite ports.
+**CIR amounts for all queues equal 100%. If each queue is receiving 10M the cir-level should all be consumed with no traffic left for above-cir**
+
+<img width="268" height="176" alt="image" src="https://github.com/user-attachments/assets/c2e8707e-40ed-4618-9f63-82f45dd86b74" />
+
+ With 80M of traffic we can see that cir-level is being consumed correct with the scheduler.
+ 
+<img width="285" height="153" alt="scheduler1" src="https://github.com/user-attachments/assets/c4706c44-bfce-451d-9076-5412619f4a17" />
 
 
 
