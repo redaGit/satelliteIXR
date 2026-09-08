@@ -484,6 +484,35 @@ state/log/log-events/satellite[event=tmnxSatelliteOperStateChange]/statistics/co
 ```
 
 # 4. Qos – Buffer Allocation with various shaping rates
+The 7750-SR-2s with a satellite assigns the buffer allocation based on the sap-egress policy the same as with any MDA. The allocation will be assigned on the "host port" on behalf of the esat port.
+
+```
+    The Sap Configuration of TestVPRN1 interface test1 and sap esat-1/1/1
+    
+    ipv4 primary address 10.10.10.1
+    ipv4 primary prefix-length 24
+    sap esat-1/1/1:10 egress qos **latency-budget 100000**
+    sap esat-1/1/1:10 egress qos sap-egress policy-name "BB-scheduler"
+    sap esat-1/1/1:10 egress qos scheduler-policy policy-name **"shaper-access-10m"**
+    sap esat-1/1/1:10 egress filter ip "sat-testing"
+
+    Queue : 7000->esat-1/1/1:10->3
+===============================================================================
+FC Map             : af
+Dest Slot          : N/A                Dest FP/TAP      : N/A
+Queue Type         : best-effort
+Admin PIR          : 9631               Oper PIR         : 1200
+Admin CIR          : 2889               Oper CIR         : 9
+Admin MBS          : **123 KB**             Oper MBS         : 123 KB
+High-Plus Drop Tail: 123 KB             High Drop Tail   : 123 KB
+Low Drop Tail      : 110 KB             Exceed Drop Tail : 98 KB
+CBS                : **40 KB**             Depth            : 0
+Slope              : not-applicable
+Burst Ctrl Grp     : 1/1-40ms (egress)  Visitation Time  : 40ms
+Admin Burst Limit  : default            Oper Burst Limit : 6 KB
+Admin Burst FIR    : default            Oper Burst FIR   : 0 KB
+===============================================================================
+
 
 
 
@@ -497,8 +526,7 @@ state/log/log-events/satellite[event=tmnxSatelliteOperStateChange]/statistics/co
 
 # 6. Qos – ACL Egress FC Classification
 
-
-
+"
 
 
 
