@@ -13,9 +13,9 @@
    
 [5. Qos - Shaping of esat ports](#5-qos-shaping-of-esat-ports)
    
-[6. Qos - ACL Egress FC Classification]
+[6. Qos - ACL Egress FC Classification](#6-qosacl-egress-fc-classification
 
-[7. Qos - Scheduling Traffic correctly]
+[7. Qos - Scheduling Traffic correctly](#7-qos–-scheduling-traffic-correctly]
    
    
 NOTE: This github does not replace NOKIA official documentation, please see the below NOKIA documentation for more details:
