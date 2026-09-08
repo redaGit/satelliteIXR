@@ -493,6 +493,7 @@ The 7750-SR-2s with a satellite assigns the buffer allocation based on the sap-e
 
 
 
+
     The Sap Configuration of TestVPRN1 interface test1 and sap esat-1/1/1
     
     ipv4 primary address 10.10.10.1
