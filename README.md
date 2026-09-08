@@ -571,11 +571,65 @@ Admin Burst FIR    : default            Oper Burst FIR   : 0 KB
 
 ```
 
-
+```
 
 # 5. Qos – Shaping of esat ports
+ The below are output and calculations from 3 VPRN esat SAP all with different shaping rates.
+ 
+ 1) Configuration output from testvprn1 interface test1 sap esat-1/1/1:10.
+    ```
+    /configure service vprn "testvprn1" interface "test1" ipv4 primary address 10.10.10.1
+    /configure service vprn "testvprn1" interface "test1" ipv4 primary prefix-length 24
+    /configure service vprn "testvprn1" interface "test1" sap esat-1/1/1:10 egress qos latency-budget 100000
+    /configure service vprn "testvprn1" interface "test1" sap esat-1/1/1:10 egress qos sap-egress policy-name "BB-scheduler"
+    /configure service vprn "testvprn1" interface "test1" sap esat-1/1/1:10 egress qos scheduler-policy policy-name "shaper-access-10m"
+    /configure service vprn "testvprn1" interface "test1" sap esat-1/1/1:10 egress filter ip "sat-testing"
+    ```
+**Traffic from Ixia is sent at a rate of 13M.**
+monitor qos scheduler-stats sap "esat-1/1/1:10" egress rate
+-- ----------------------------------------------------------------------------
+At time t = 33 sec (Mode: Rate)
+- ------------------------------------------------------------------------------
+Egress Schedulers
+top                                **2301**                   1200910
+
+- ------------------------------------------------------------------------------
+At time t = 44 sec (Mode: Rate)
+- ------------------------------------------------------------------------------
+Egress Schedulers
+top                                **2299**                   1199943
 
 
+**The above calculation is 2301 pps. The IXIA is sending 522 byte packet plus there is 4 bytes added to each frame from the satellite. 2301 x 546(522 + 20 bytes + 4 bytes) x 8 = 10,050,768.**
+
+ 
+2) Configuration output from testvprn1 interface test2 sap esat-1/1/1:20.
+   ```
+   
+    /configure service vprn "testvprn1" interface "test2" ipv4 primary address 10.10.20.1
+    /configure service vprn "testvprn1" interface "test2" ipv4 primary prefix-length 24
+    /configure service vprn "testvprn1" interface "test2" sap esat-1/1/1:20 egress qos latency-budget 500000
+    /configure service vprn "testvprn1" interface "test2" sap esat-1/1/1:20 egress qos sap-egress policy-name "BB-scheduler"
+    /configure service vprn "testvprn1" interface "test2" sap esat-1/1/1:20 egress qos scheduler-policy policy-name "shaper-access-100M"
+    /configure service vprn "testvprn1" interface "test2" sap esat-1/1/1:20 egress filter ip "sat-testing"
+   ```
+   **Traffic from Ixia is sent at a rate of 105M.**
+ monitor qos scheduler-stats sap "esat-1/1/1:10" egress rate
+   -- -----------------------------------------------------------------------------
+At time t = 33 sec (Mode: Rate)
+-- -----------------------------------------------------------------------------
+Egress Schedulers
+top                                **22970**                  11990387
+
+-------------------------------------------------------------------------------
+At time t = 44 sec (Mode: Rate)
+-- -----------------------------------------------------------------------------
+Egress Schedulers
+top                                **22969**                  11989723
+
+-------------------------------------------------------------------------------
+
+**The above calculation is 22970 pps. The IXIA is sending 522 byte packet plus there is 4 bytes added to each frame from the satellite. 22970 x 546(522 + 20 bytes + 4 bytes) x 8 = 100,332,960.**
 
 
 
