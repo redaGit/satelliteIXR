@@ -12,6 +12,8 @@
 6. Qos - ACL Egress FC Classification.
 7. Qos - Scheduling Traffic correctly
    
+NOTE: This github does not replace NOKIA official documentation, please see the below NOKIA documentation for more details:
+(inset documentation link) 
 
 # 0. Release information and Topology
 
@@ -144,7 +146,300 @@ Hardware Data
 ```
 # 2. esat ports in VPRN as SAP
 
-# 3. Logging and Alarms of Satellite and esat ports
+# 3. Logging and Alarms of Satellite
+SNMP
+For all the events: name, ID, OID, MIB information: https://documentation.nokia.com/sr/25-10/7x50-shared/log-events/log-satellite.html
+
+State Paths (gNMI SUBSCRIBE / NETCONF get)
+path: 
+-  /state/log/log-events/satellite[event=*]
+-  /state/log/event-trigger/satellite[event=*]
+
+Example of retrieving all events:
+```
+gnmic -a 100.127.180.177:57400 --insecure -u admin -p Nokia2018! get --path "/state/log/log-events/satellite[event=*]"
+
+```
+Output:
+```
+[
+  {
+    "source": "100.127.180.177:57400",
+    "timestamp": 1788825900854371845,
+    "time": "2026-09-07T20:05:00.854371845-04:00",
+    "updates": [
+      {
+        "Path": "state/log/log-events/satellite[event=tmnxSatelliteOperStateChange]",
+        "values": {
+          "state/log/log-events/satellite": {
+            "event": "tmnxSatelliteOperStateChange",
+            "event-id": 2001,
+            "parameters": [
+              "tmnxChassisIndex",
+              "tmnxHwIndex",
+              "tmnxHwOperState",
+              "tmnxSatNotifyFailureReason"
+            ],
+            "source-stream": "main",
+            "statistics": {
+              "count": 9,
+              "drop": 0
+            }
+          }
+        }
+      },
+      {
+        "Path": "state/log/log-events/satellite[event=tmnxSatSyncIfTimRefSwitch]",
+        "values": {
+          "state/log/log-events/satellite": {
+            "event": "tmnxSatSyncIfTimRefSwitch",
+            "event-id": 2002,
+            "parameters": [
+              "tmnxSatClass",
+              "tmnxSatId",
+              "tmnxSatSyncIfTimingRef1InUse",
+              "tmnxSatSyncIfTimingRef2InUse"
+            ],
+            "source-stream": "main",
+            "statistics": {
+              "count": 0,
+              "drop": 0
+            }
+          }
+        }
+      },
+      {
+        "Path": "state/log/log-events/satellite[event=tmnxSatSyncIfTimSystemQuality]",
+        "values": {
+          "state/log/log-events/satellite": {
+            "event": "tmnxSatSyncIfTimSystemQuality",
+            "event-id": 2003,
+            "parameters": [
+              "tmnxSatClass",
+              "tmnxSatId",
+              "tmnxSatSyncIfTimingSystemQltyLvl"
+            ],
+            "source-stream": "main",
+            "statistics": {
+              "count": 4,
+              "drop": 0
+            }
+          }
+        }
+      },
+      {
+        "Path": "state/log/log-events/satellite[event=tmnxSatSyncIfTimRef1Quality]",
+        "values": {
+          "state/log/log-events/satellite": {
+            "event": "tmnxSatSyncIfTimRef1Quality",
+            "event-id": 2004,
+            "parameters": [
+              "tmnxSatClass",
+              "tmnxSatId",
+              "tmnxSatSyncIfTimingRef1RxQltyLvl"
+            ],
+            "source-stream": "main",
+            "statistics": {
+              "count": 0,
+              "drop": 0
+            }
+          }
+        }
+      },
+      {
+        "Path": "state/log/log-events/satellite[event=tmnxSatSyncIfTimRef2Quality]",
+        "values": {
+          "state/log/log-events/satellite": {
+            "event": "tmnxSatSyncIfTimRef2Quality",
+            "event-id": 2005,
+            "parameters": [
+              "tmnxSatClass",
+              "tmnxSatId",
+              "tmnxSatSyncIfTimingRef2RxQltyLvl"
+            ],
+            "source-stream": "main",
+            "statistics": {
+              "count": 0,
+              "drop": 0
+            }
+          }
+        }
+      },
+      {
+        "Path": "state/log/log-events/satellite[event=tmnxSatSyncIfTimHoldover]",
+        "values": {
+          "state/log/log-events/satellite": {
+            "event": "tmnxSatSyncIfTimHoldover",
+            "event-id": 2006,
+            "parameters": [
+              "tmnxChassisIndex",
+              "tmnxHwIndex",
+              "tmnxHwClass"
+            ],
+            "source-stream": "main",
+            "statistics": {
+              "count": 0,
+              "drop": 0
+            }
+          }
+        }
+      },
+      {
+        "Path": "state/log/log-events/satellite[event=tmnxSatSyncIfTimHoldoverClear]",
+        "values": {
+          "state/log/log-events/satellite": {
+            "event": "tmnxSatSyncIfTimHoldoverClear",
+            "event-id": 2007,
+            "parameters": [
+              "tmnxChassisIndex",
+              "tmnxHwIndex",
+              "tmnxHwClass"
+            ],
+            "source-stream": "main",
+            "statistics": {
+              "count": 0,
+              "drop": 0
+            }
+          }
+        }
+      },
+      {
+        "Path": "state/log/log-events/satellite[event=tmnxSatSyncIfTimRef1Alarm]",
+        "values": {
+          "state/log/log-events/satellite": {
+            "event": "tmnxSatSyncIfTimRef1Alarm",
+            "event-id": 2008,
+            "parameters": [
+              "tmnxChassisIndex",
+              "tmnxHwIndex",
+              "tmnxHwClass",
+              "tmnxSatNotifySyncIfTimRefAlarm"
+            ],
+            "source-stream": "main",
+            "statistics": {
+              "count": 3,
+              "drop": 0
+            }
+          }
+        }
+      },
+      {
+        "Path": "state/log/log-events/satellite[event=tmnxSatSyncIfTimRef1AlarmClear]",
+        "values": {
+          "state/log/log-events/satellite": {
+            "event": "tmnxSatSyncIfTimRef1AlarmClear",
+            "event-id": 2009,
+            "parameters": [
+              "tmnxChassisIndex",
+              "tmnxHwIndex",
+              "tmnxHwClass",
+              "tmnxSatNotifySyncIfTimRefAlarm"
+            ],
+            "source-stream": "main",
+            "statistics": {
+              "count": 1,
+              "drop": 0
+            }
+          }
+        }
+      },
+      {
+        "Path": "state/log/log-events/satellite[event=tmnxSatSyncIfTimRef2Alarm]",
+        "values": {
+          "state/log/log-events/satellite": {
+            "event": "tmnxSatSyncIfTimRef2Alarm",
+            "event-id": 2010,
+            "parameters": [
+              "tmnxChassisIndex",
+              "tmnxHwIndex",
+              "tmnxHwClass",
+              "tmnxSatNotifySyncIfTimRefAlarm"
+            ],
+            "source-stream": "main",
+            "statistics": {
+              "count": 3,
+              "drop": 0
+            }
+          }
+        }
+      },
+      {
+        "Path": "state/log/log-events/satellite[event=tmnxSatSyncIfTimRef2AlarmClear]",
+        "values": {
+          "state/log/log-events/satellite": {
+            "event": "tmnxSatSyncIfTimRef2AlarmClear",
+            "event-id": 2011,
+            "parameters": [
+              "tmnxChassisIndex",
+              "tmnxHwIndex",
+              "tmnxHwClass",
+              "tmnxSatNotifySyncIfTimRefAlarm"
+            ],
+            "source-stream": "main",
+            "statistics": {
+              "count": 1,
+              "drop": 0
+            }
+          }
+        }
+      },
+      {
+        "Path": "state/log/log-events/satellite[event=tmnxSatLocalForwardStateChg]",
+        "values": {
+          "state/log/log-events/satellite": {
+            "event": "tmnxSatLocalForwardStateChg",
+            "event-id": 2016,
+            "parameters": [
+              "tmnxSatLocalForwardId",
+              "tmnxSatLocalForwardAdminState",
+              "tmnxSatLocalForwardOperState"
+            ],
+            "source-stream": "main",
+            "statistics": {
+              "count": 0,
+              "drop": 0
+            }
+          }
+        }
+      },
+      {
+        "Path": "state/log/log-events/satellite[event=tmnxSatLocalForwardSapStateChg]",
+        "values": {
+          "state/log/log-events/satellite": {
+            "event": "tmnxSatLocalForwardSapStateChg",
+            "event-id": 2017,
+            "parameters": [
+              "tmnxSatLocalForwardId",
+              "tmnxSatPortId",
+              "tmnxSatEncapValue",
+              "tmnxSatLocalForwardSapAdminState",
+              "tmnxSatLocalForwardSapOperState"
+            ],
+            "source-stream": "main",
+            "statistics": {
+              "count": 0,
+              "drop": 0
+            }
+          }
+        }
+      }
+    ]
+  }
+]
+```
+To filter based on occurrence:
+```
+gnmic -a 100.127.180.177:57400 --insecure -u admin -p Nokia2018! get --path "/state/log/log-events/satellite[event=*]" --format flat | grep "statistics/count" | grep -v " 0$"
+```
+Output example:  
+```
+state/log/log-events/satellite[event=tmnxSatSyncIfTimRef1AlarmClear]/statistics/count: 1
+state/log/log-events/satellite[event=tmnxSatSyncIfTimRef1Alarm]/statistics/count: 3
+state/log/log-events/satellite[event=tmnxSatSyncIfTimRef2AlarmClear]/statistics/count: 1
+state/log/log-events/satellite[event=tmnxSatSyncIfTimRef2Alarm]/statistics/count: 3
+state/log/log-events/satellite[event=tmnxSatSyncIfTimSystemQuality]/statistics/count: 4
+state/log/log-events/satellite[event=tmnxSatelliteOperStateChange]/statistics/count: 9
+```
 
 # 4. Qos – Buffer Allocation with various shaping rates
 
