@@ -487,6 +487,12 @@ state/log/log-events/satellite[event=tmnxSatelliteOperStateChange]/statistics/co
 The 7750-SR-2s with a satellite assigns the buffer allocation based on the sap-egress policy the same as with any MDA. The allocation will be assigned on the "host port" on behalf of the esat port.
 
 ```
+
+
+
+
+
+
     The Sap Configuration of TestVPRN1 interface test1 and sap esat-1/1/1
     
     ipv4 primary address 10.10.10.1
@@ -497,6 +503,7 @@ The 7750-SR-2s with a satellite assigns the buffer allocation based on the sap-e
     sap esat-1/1/1:10 egress filter ip "sat-testing"
 ```
 The formula for latency budget on the sap = Admin MBS x 8= Value, Value/Shaping Rate
+
 The is the display of Queue 3 buffer allocation.
     Queue : 7000->esat-1/1/1:10->3
 ===============================================================================
@@ -514,8 +521,39 @@ Burst Ctrl Grp     : 1/1-40ms (egress)  Visitation Time  : 40ms
 Admin Burst Limit  : default            Oper Burst Limit : 6 KB
 Admin Burst FIR    : default            Oper Burst FIR   : 0 KB
 ===============================================================================
+```
+# The above MBS is 123K. 123K x 8= 984, 984/10000= 98.4 msec. Queue 3 uses 30% of CBS. 123/40KB= 32%.
 
-## The above MBS is 123K. 123K x 8= 984, 984/10000= 98.4 msec ##
+```
+    /configure service vprn "testvprn1" interface "test2" ipv4 primary address 10.10.20.1
+    /configure service vprn "testvprn1" interface "test2" ipv4 primary prefix-length 24
+    /configure service vprn "testvprn1" interface "test2" sap esat-1/1/1:20 egress qos latency-budget 500000
+    /configure service vprn "testvprn1" interface "test2" sap esat-1/1/1:20 egress qos sap-egress policy-name "BB-scheduler"
+    /configure service vprn "testvprn1" interface "test2" sap esat-1/1/1:20 egress qos scheduler-policy policy-name "shaper-access-100M"
+    /configure service vprn "testvprn1" interface "test2" sap esat-1/1/1:20 egress filter ip "sat-testing"
+```
+ This is the output for test2 interface in testvprn1 for Queue 4.
+
+Queue : 7000->esat-1/1/1:20->4
+= ==============================================================================
+FC Map             : l1
+Dest Slot          : N/A                Dest FP/TAP      : N/A
+Queue Type         : best-effort
+Admin PIR          : 96311              Oper PIR         : 12050
+Admin CIR          : 4815               Oper CIR         : 1687
+Admin MBS          : 6144 KB            Oper MBS         : 6144 KB
+High-Plus Drop Tail: 6144 KB            High Drop Tail   : 6144 KB
+Low Drop Tail      : 5504 KB            Exceed Drop Tail : 4864 KB
+CBS                : 312 KB             Depth            : 0
+Slope              : not-applicable
+Burst Ctrl Grp     : 1/1-20ms (egress)  Visitation Time  : 20ms
+Admin Burst Limit  : default            Oper Burst Limit : 32 KB
+Admin Burst FIR    : default            Oper Burst FIR   : 0 KB
+=============================================================================== ==
+
+# The above output calculation 6144 x 8= 49,152, 49152/100000= 492 msecs. Queue 4 has a CBS percentage of 5%- 312/6144= 5%. 
+
+```
 
 
 
