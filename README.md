@@ -160,6 +160,33 @@ Hardware Data
 ===============================================================================
 ```
 # 2. esat ports in VPRN as SAP
+Once the 7250-IXR-s has been provisioned as a satellite the ports can be viewed and configured as regular 7750-SR ports.
+
+show port
+sat-1/1/1    Up    Yes  Up      1518 1518    - accs dotq vspeed GIGE-SX
+esat-1/1/2    Up    Yes  Up      9208 9208    - hybr dotq vspeed GIGE-SX
+esat-1/1/3    Up    Yes  Up      9208 9208    - netw null vspeed GIGE-SX
+esat-1/1/4    Up    Yes  Up      9208 9208    - netw null vspeed GIGE-SX
+
+Configure the port as access or hybrid and dot1q encapsulation if required. For the esat ports for the 7250-IXR-s you must set the port to autonegotiate "true" and the speed to 1G.
+
+     info full-context
+    /configure port esat-1/1/1 admin-state enable
+    /configure port esat-1/1/1 ethernet autonegotiate true
+    /configure port esat-1/1/1 ethernet mode access
+    /configure port esat-1/1/1 ethernet encap-type dot1q
+    /configure port esat-1/1/1 ethernet speed 1000
+
+The esat port can then be configured as a SAP the same way as any other port.
+
+    /configure service vprn "testvprn1" interface "test1" sap esat-1/1/1:10 egress qos latency-budget 100000
+    /configure service vprn "testvprn1" interface "test1" sap esat-1/1/1:10 egress qos sap-egress policy-name "BB-scheduler"
+    /configure service vprn "testvprn1" interface "test1" sap esat-1/1/1:10 egress qos scheduler-policy policy-name "shaper-access-10m"
+    /configure service vprn "testvprn1" interface "test1" sap esat-1/1/1:10 egress filter ip "sat-testing"
+
+
+
+
 
 # 3. Logging and Alarms of Satellite
 SNMP
