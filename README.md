@@ -659,7 +659,10 @@ top                                **11498**                  6001766
 At time t = 33 sec (Mode: Rate)
 -- -----------------------------------------------------------------------------
 Egress Schedulers
-top                                **11496**                  6001007
+top
+                                     **11496**                  6001007
+
+                                  
 ```
 ```
 **The above calculation is 11496 pps. The IXIA is sending 522 byte packet plus there is 4 bytes added to each frame from the satellite. 11496 x 546(522 + 20 bytes + 4 bytes) x 8 = 50,223,264.**
@@ -671,8 +674,106 @@ end
 
 
 # 6. Qos – ACL Egress FC Classification
+ Egress classification with an egress ip-filter was performed with the following results.
 
-"
+ip-filter
+```
+A:admin@NS2250F5526# info full-context
+    /configure filter ip-filter "sat-testing-30-10" default-action accept
+    /configure filter ip-filter "sat-testing-30-10" filter-id 300
+    /configure filter ip-filter "sat-testing-30-10" entry 10 match protocol udp
+    /configure filter ip-filter "sat-testing-30-10" entry 10 match src-ip address 30.30.30.3
+    /configure filter ip-filter "sat-testing-30-10" entry 10 match src-ip mask 255.255.255.255
+    /configure filter ip-filter "sat-testing-30-10" entry 10 match dst-port eq 445
+    /configure filter ip-filter "sat-testing-30-10" entry 10 action accept
+    /configure filter ip-filter "sat-testing-30-10" entry 10 action fc be
+    /configure filter ip-filter "sat-testing-30-10" entry 20 match dst-ip ip-prefix-list "10.10.10.4"
+    /configure filter ip-filter "sat-testing-30-10" entry 20 action accept
+    /configure filter ip-filter "sat-testing-30-10" entry 20 action fc l2
+    /configure filter ip-filter "sat-testing-30-10" entry 30 match protocol udp
+    /configure filter ip-filter "sat-testing-30-10" entry 30 match src-port range start 1000
+    /configure filter ip-filter "sat-testing-30-10" entry 30 match src-port range end 1005
+    /configure filter ip-filter "sat-testing-30-10" entry 30 action accept
+    /configure filter ip-filter "sat-testing-30-10" entry 30 action fc af
+    /configure filter ip-filter "sat-testing-30-10" entry 40 match dscp cs1
+    /configure filter ip-filter "sat-testing-30-10" entry 40 action accept
+    /configure filter ip-filter "sat-testing-30-10" entry 40 action fc l1
+    /configure filter ip-filter "sat-testing-30-10" entry 50 match protocol udp
+    /configure filter ip-filter "sat-testing-30-10" entry 50 match src-ip ip-prefix-list "30.30.30.7"
+    /configure filter ip-filter "sat-testing-30-10" entry 50 match src-port port-list "BB"
+    /configure filter ip-filter "sat-testing-30-10" entry 50 action accept
+    /configure filter ip-filter "sat-testing-30-10" entry 50 action fc h2
+    /configure filter ip-filter "sat-testing-30-10" entry 60 match dscp af43
+    /configure filter ip-filter "sat-testing-30-10" entry 60 action accept
+    /configure filter ip-filter "sat-testing-30-10" entry 60 action fc ef
+    /configure filter ip-filter "sat-testing-30-10" entry 70 match src-ip address 30.30.30.9
+    /configure filter ip-filter "sat-testing-30-10" entry 70 match src-ip mask 255.255.255.255
+    /configure filter ip-filter "sat-testing-30-10" entry 70 match dst-ip ip-prefix-list "10.10.10.9"
+    /configure filter ip-filter "sat-testing-30-10" entry 70 action accept
+    /configure filter ip-filter "sat-testing-30-10" entry 70 action fc h1
+    /configure filter ip-filter "sat-testing-30-10" entry 80 match dscp cs5
+    /configure filter ip-filter "sat-testing-30-10" entry 80 action accept
+    /configure filter ip-filter "sat-testing-30-10" entry 80 action fc nc
+   /configure service vprn "testvprn1" interface "test1" sap esat-1/1/1:10 egress filter ip "sat-testing"
+   ```
+
+```
+
+
+show service id 7000 sap "esat-1/1/1:10" stats
+
+
+Egress Queue 1
+For. In/InplusProf    : 0                       0
+For. Out/ExcProf      : 692303                  361382166
+Dro. In/InplusProf    : 0                       0
+Dro. Out/ExcProf      : 526542                  274854924
+
+Egress Queue 2
+For. In/InplusProf    : 891385                  465302970
+For. Out/ExcProf      : 0                       0
+Dro. In/InplusProf    : 327458                  170933076
+Dro. Out/ExcProf      : 0                       0
+
+Egress Queue 3
+For. In/InplusProf    : 0                       0
+For. Out/ExcProf      : 1141212                 595712664
+Dro. In/InplusProf    : 0                       0
+Dro. Out/ExcProf      : 77629                   40522338
+
+Egress Queue 4
+For. In/InplusProf    : 277099                  144645678
+For. Out/ExcProf      : 0                       0
+Dro. In/InplusProf    : 941741                  491588802
+Dro. Out/ExcProf      : 0                       0
+
+Egress Queue 5
+For. In/InplusProf    : 487587                  254520414
+For. Out/ExcProf      : 0                       0
+Dro. In/InplusProf    : 731253                  381714066
+Dro. Out/ExcProf      : 0                       0
+
+Egress Queue 6
+For. In/InplusProf    : 498703                  260322966
+For. Out/ExcProf      : 0                       0
+Dro. In/InplusProf    : 720134                  375909948
+Dro. Out/ExcProf      : 0                       0
+
+Egress Queue 7
+For. In/InplusProf    : 279190                  145737180
+For. Out/ExcProf      : 0                       0
+Dro. In/InplusProf    : 939647                  490495734
+Dro. Out/ExcProf      : 0                       0
+
+Egress Queue 8
+For. In/InplusProf    : 452521                  236201888
+For. Out/ExcProf      : 0                       0
+Dro. In/InplusProf    : 770895                  402407190
+```
+
+  
+
+
 
 
 
