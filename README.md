@@ -515,7 +515,7 @@ Admin Burst Limit  : default            Oper Burst Limit : 6 KB
 Admin Burst FIR    : default            Oper Burst FIR   : 0 KB
 ===============================================================================
 
-**The above MBS is 123K. 123K x 8= 984, 984/10000= 98.4 msec**
+** The above MBS is 123K. 123K x 8= 984, 984/10000= 98.4 msec **
 
 
 
