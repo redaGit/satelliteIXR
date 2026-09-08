@@ -715,6 +715,10 @@ A:admin@NS2250F5526# info full-context
     /configure filter ip-filter "sat-testing-30-10" entry 80 match dscp cs5
     /configure filter ip-filter "sat-testing-30-10" entry 80 action accept
     /configure filter ip-filter "sat-testing-30-10" entry 80 action fc nc
+
+
+
+
    /configure service vprn "testvprn1" interface "test1" sap esat-1/1/1:10 egress filter ip "sat-testing"
    ```
 
