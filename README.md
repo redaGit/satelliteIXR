@@ -9,7 +9,7 @@
    
 [3. Logging and Alarms of Satellite and esat ports](#3-Logging-and-Alarms-of-Satellite)
 
-[4. Qos – Buffer Allocation with various shaping rates](#4-Qos–-Buffer-Allocation-with-various-shaping-rates)
+[4. Qos – Buffer Allocation with various shaping rates](#4-qos--buffer-allocation-with-various-shaping-rates)
    
 [5. Qos - Shaping of esat ports](#5-Qos-Shaping-of-esat-ports)
    
