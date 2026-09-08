@@ -161,7 +161,7 @@ Hardware Data
 ```
 # 2. esat ports in VPRN as SAP
 Once the 7250-IXR-s has been provisioned as a satellite the ports can be viewed and configured as regular 7750-SR ports.
-
+```
 show port
 sat-1/1/1    Up    Yes  Up      1518 1518    - accs dotq vspeed GIGE-SX
 esat-1/1/2    Up    Yes  Up      9208 9208    - hybr dotq vspeed GIGE-SX
