@@ -455,14 +455,14 @@ state/log/log-events/satellite[event=tmnxSatelliteOperStateChange]/statistics/co
 
 
 
-# 5. Qos - Shaping of esat ports
+# 5. Qos – Shaping of esat ports
 
 
 
 
 
 
-# 6. Qos - ACL Egress FC Classification
+# 6. Qos – ACL Egress FC Classification
 
 
 
@@ -471,7 +471,7 @@ state/log/log-events/satellite[event=tmnxSatelliteOperStateChange]/statistics/co
 
 
 
-# 7. Qos - Scheduling Traffic correctly
+# 7. Qos – Scheduling Traffic correctly
 
 
 
