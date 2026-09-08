@@ -505,7 +505,7 @@ Dest Slot          : N/A                Dest FP/TAP      : N/A
 Queue Type         : best-effort
 Admin PIR          : 9631               Oper PIR         : 1200
 Admin CIR          : 2889               Oper CIR         : 9
-Admin MBS          : `123 KB`           Oper MBS         : 123 KB
+Admin MBS          : <mark>123 KB</mark>         Oper MBS         : 123 KB
 High-Plus Drop Tail: 123 KB             High Drop Tail   : 123 KB
 Low Drop Tail      : 110 KB             Exceed Drop Tail : 98 KB
 CBS                : `40 KB`             Depth            : 0
