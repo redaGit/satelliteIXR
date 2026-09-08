@@ -669,11 +669,12 @@ top
 
 end
 
-```
+
 
 
 
 # 6. Qos – ACL Egress FC Classification
+
  Egress classification with an egress ip-filter was performed with the following results.
 ```
 ip-filter
