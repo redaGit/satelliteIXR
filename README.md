@@ -7,10 +7,10 @@
 
 [2. Port Configuration and Mapping](#2-port-configuration-and-mapping) 
 
-[2. esat ports in VPRN as SAP.](#2-esat-ports-in-VPRN-as-SAP)
-   
 [3. Logging and Alarms of Satellite and esat ports](#3-logging-and-Alarms-of-satellite)
 
+[4. esat ports in VPRN as SAP.](#3-esat-ports-in-VPRN-as-SAP)
+   
 [4. Qos – Buffer Allocation with various shaping rates](#4-qos--buffer-allocation-with-various-shaping-rates)
    
 [5. Qos - Shaping of esat ports](#5-qos--shaping-of-esat-ports)
