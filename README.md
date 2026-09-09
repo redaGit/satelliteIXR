@@ -611,9 +611,9 @@ top                                **2299**                   1199943
    ```
    **Traffic from Ixia is sent at a rate of 105M.**
 
-   
+``` 
  monitor qos scheduler-stats sap "esat-1/1/1:10" egress rate
-  ```
+```
 At time t = 33 sec (Mode: Rate)
   -----------------------------------------------------------------------------
 Egress Schedulers
@@ -625,9 +625,9 @@ At time t = 44 sec (Mode: Rate)
 Egress Schedulers
 top                                **22969**                  11989723
 
--------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------
 ```
-
+```
 
 **The above calculation is 22970 pps. The IXIA is sending 522 byte packet plus there is 4 bytes added to each frame from the satellite. 22970 x 546(522 + 20 bytes + 4 bytes) x 8 = 100,332,960.**
  
