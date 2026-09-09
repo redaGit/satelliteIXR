@@ -163,9 +163,7 @@ Hardware Data
 ```
 
 
-# 2. Port Configuration and Mapping
-
-# 4. esat ports in VPRN as SAP
+# 2. esat ports mapping and configuration in VPRN as SAP
 Once the 7250-IXR-s has been provisioned as a satellite the ports can be viewed and configured as regular 7750-SR ports.
 ```
 show port
