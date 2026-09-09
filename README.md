@@ -514,11 +514,12 @@ The Sap Configuration of TestVPRN1 interface test1 and sap esat-1/1/1
 ```
 **The formula for latency budget on the sap = Admin MBS x 8= Value, Value/Shaping Rate**
 
-The is the display of Queue 3 buffer allocation.
+The is the display of Queue 3 buffer allocation for "100ms"
     Queue : 7000->esat-1/1/1:10->3
 ```
 show pools 1/1/c2/1 access-egress service "testvprn1"
 .....
+Queue : 7000->esat-1/1/1:10->3
 = ==============================================================================
 FC Map             : af
 Dest Slot          : N/A                Dest FP/TAP      : N/A
@@ -546,12 +547,10 @@ Admin Burst FIR    : default            Oper Burst FIR   : 0 KB
     /configure service vprn "testvprn1" interface "test2" sap esat-1/1/1:20 egress qos scheduler-policy policy-name "shaper-access-100M"
     /configure service vprn "testvprn1" interface "test2" sap esat-1/1/1:20 egress filter ip "sat-testing"
 ```
-
- This is the output for test2 interface in testvprn1 for Queue 4.
-
-Queue : 7000->esat-1/1/1:20->4
+The is the display of Queue 4 buffer allocation for "500ms"
 
 ```
+Queue : 7000->esat-1/1/1:20->4
 = ==============================================================================
 FC Map             : l1
 Dest Slot          : N/A                Dest FP/TAP      : N/A
