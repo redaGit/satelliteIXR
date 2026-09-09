@@ -171,7 +171,7 @@ esat-1/1/2    Up    Yes  Up      9208 9208    - hybr dotq vspeed GIGE-SX
 esat-1/1/3    Up    Yes  Up      9208 9208    - netw null vspeed GIGE-SX
 esat-1/1/4    Up    Yes  Up      9208 9208    - netw null vspeed GIGE-SX
 
-Configure the port as access or hybrid and dot1q encapsulation if required. For the esat ports for the 7250-IXR-s you must set the port to autonegotiate "true" and the speed to 1G.
+Configure the port as access or hybrid and dot1q encapsulation if required. For the esat ports you must set the port to autonegotiate "true" and the speed to 1G.
 
      info full-context
     /configure port esat-1/1/1 admin-state enable
