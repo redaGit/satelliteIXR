@@ -516,7 +516,9 @@ The Sap Configuration of TestVPRN1 interface test1 and sap esat-1/1/1
 
 The is the display of Queue 3 buffer allocation.
     Queue : 7000->esat-1/1/1:10->3
-```    
+```
+show pools 1/1/c2/1 access-egress service "testvprn1"
+.....
 = ==============================================================================
 FC Map             : af
 Dest Slot          : N/A                Dest FP/TAP      : N/A
