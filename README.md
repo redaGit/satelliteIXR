@@ -66,7 +66,7 @@ Host SR OS Release 26.x supports 7250 IXR satellite image 24.x, 25.x, and 26.x.
         admin-state enable
         mac-address 8c:f7:73:ed:53:d3
         sat-type es48-sfpp+6-qsfp28
-        software-repository "IXR-s-25.10.R7"
+        software-repository "IXR-s-2s 2301 pps. The IXIA 5.10.R7"
         console-access enable
         port-map esat-2/1/1 {
             primary esat-2/1/c49/u1
@@ -601,9 +601,9 @@ At time t = 44 sec (Mode: Rate)
 Egress Schedulers
 top                                **2299**                   1199943
 
-```
+
 **The above calculation is 2301 pps. The IXIA is sending 522 byte packet plus there is 4 bytes added to each frame from the satellite. 2301 x 546(522 + 20 bytes + 4 bytes) x 8 = 10,050,768.**
-```
+
  
 2) Configuration output from testvprn1 interface test2 sap esat-1/1/1:20.
    ```
@@ -648,6 +648,7 @@ top                                **22969**                  11989723
 ```
     
     ** Traffic from Ixia is sent at a rate of 105M.**
+
 ```
 monitor qos scheduler-stats sap "esat-1/1/2:30" egress rate
 ```
@@ -663,8 +664,6 @@ top
                                      **11496**                  6001007
 
                                   
-```
-```
 **The above calculation is 11496 pps. The IXIA is sending 522 byte packet plus there is 4 bytes added to each frame from the satellite. 11496 x 546(522 + 20 bytes + 4 bytes) x 8 = 50,223,264.**
 
 end
