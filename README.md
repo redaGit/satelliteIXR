@@ -24,8 +24,8 @@ NOTE: This github does not replace NOKIA official documentation, please see the 
 # 0. Release information and Topology
 
 Compatibility: 
-Host SR OS Release 25.x supports 7250 IXR satellite image 23.x, 24.x, and 25.x. 
-Host SR OS Release 26.x supports 7250 IXR satellite image 24.x, 25.x, and 26.x.
+- Host SR OS Release 25.x supports 7250 IXR satellite image 23.x, 24.x, and 25.x
+- Host SR OS Release 26.x supports 7250 IXR satellite image 24.x, 25.x, and 26.x
 
 <img width="1282" height="805" alt="image" src="https://github.com/user-attachments/assets/a6306137-b2cb-438e-be00-020c45eb994a" />
 
