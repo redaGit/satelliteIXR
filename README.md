@@ -588,7 +588,7 @@ Admin Burst FIR    : default            Oper Burst FIR   : 0 KB
 **Traffic from Ixia is sent at a rate of 13M.**
 
 ```
-monitor qos scheduler-stats sap "esat-1/1/1:10" egress rate
+monitor qos scheduler-stats sap "esat-1/1/1:20" egress rate
 ```
 At time t = 33 sec (Mode: Rate)
 - - -----------------------------------------------------------------------------
@@ -621,7 +621,7 @@ top                                **2299**                   1199943
  monitor qos scheduler-stats sap "esat-1/1/1:10" egress rate
   ```
 At time t = 33 sec (Mode: Rate)
--- -----------------------------------------------------------------------------
+  -----------------------------------------------------------------------------
 Egress Schedulers
 top                                **22970**                  11990387
 
