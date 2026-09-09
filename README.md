@@ -9,13 +9,13 @@
 
 [3. Logging and Alarms of Satellite and esat ports](#3-logging-and-Alarms-of-satellite)
 
-[4. Qos – Buffer Allocation with various shaping rates](#5-qos--buffer-allocation-with-various-shaping-rates)
+[4. Qos – Buffer Allocation with various shaping rates](#4-qos--buffer-allocation-with-various-shaping-rates)
    
-[5. Qos - Shaping of esat ports](#6-qos--shaping-of-esat-ports)
+[5. Qos - Shaping of esat ports](#5-qos--shaping-of-esat-ports)
    
-[6. Qos - ACL Egress FC Classification](#7-qos--acl-egress-fc-classification)
+[6. Qos - ACL Egress FC Classification](#6-qos--acl-egress-fc-classification)
 
-[7. Qos - Scheduling Traffic correctly](#8-qos--scheduling-traffic-correctly)
+[7. Qos - Scheduling Traffic correctly](#7-qos--scheduling-traffic-correctly)
    
    
 NOTE: This github does not replace NOKIA official documentation, please see the below NOKIA documentation for more details:
