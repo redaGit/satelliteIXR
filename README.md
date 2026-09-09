@@ -573,10 +573,6 @@ Admin Burst FIR    : default            Oper Burst FIR   : 0 KB
 
 **The above output calculation 6144 x 8= 49,152, 49152/100000= 492 msecs. Queue 4 uses 5% of CBS. 312/6144= 5%.**
 
-```
-
-```
-
 # 5. Qos – Shaping of esat ports
  The below are output and calculations from 3 VPRN esat SAP all with different shaping rates.
  
