@@ -490,7 +490,6 @@ state/log/log-events/satellite[event=tmnxSatelliteOperStateChange]/statistics/co
 The 7750-SR-2s with a satellite assigns the buffer allocation based on the sap-egress policy the same as with any MDA. The allocation will be assigned on the "host port" on behalf of the esat port.
 
 ```
-
 | Queue #|	PIR     |	CIR    | MBS     |	CBS       |  cir-level  |	cir-weight     |
 |-------:|---------:|---------:|--------:|------------:|-------------:|---------------:|
 |Q1	   | PIR 100% |CIR 15%   | MBS 100%|	CBS 15%   |	 4           |	15             |                |
@@ -502,18 +501,11 @@ The 7750-SR-2s with a satellite assigns the buffer allocation based on the sap-e
 |Q7	 | PIR 100% |	CIR 5% |MBS 100% |	CBS 5% |	 4    |	5              |
 |Q8	 | PIR 100% |	CIR 5% |MBS 100% |	CBS 5% |         7    |	5              |
 
-
 ```
 
+The Sap Configuration of TestVPRN1 interface test1 and sap esat-1/1/1
 
-
-
-
-
-
-
-    The Sap Configuration of TestVPRN1 interface test1 and sap esat-1/1/1
-    
+```    
     ipv4 primary address 10.10.10.1
     ipv4 primary prefix-length 24
     sap esat-1/1/1:10 egress qos **latency-budget 100000**
@@ -525,9 +517,9 @@ The 7750-SR-2s with a satellite assigns the buffer allocation based on the sap-e
 
 The formula for latency budget on the sap = Admin MBS x 8= Value, Value/Shaping Rate
 
-
 The is the display of Queue 3 buffer allocation.
     Queue : 7000->esat-1/1/1:10->3
+    
 ```    
 = ==============================================================================
 FC Map             : af
