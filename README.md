@@ -581,7 +581,7 @@ Admin Burst FIR    : default            Oper Burst FIR   : 0 KB
 
 ```
 monitor qos scheduler-stats sap "esat-1/1/1:20" egress rate
-```
+
 At time t = 33 sec (Mode: Rate)
 - - -----------------------------------------------------------------------------
 Egress Schedulers
