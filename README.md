@@ -521,14 +521,15 @@ The 7750-SR-2s with a satellite assigns the buffer allocation based on the sap-e
     sap esat-1/1/1:10 egress qos scheduler-policy policy-name **"shaper-access-10m"**
     sap esat-1/1/1:10 egress filter ip "sat-testing"
 ```
+
+
 The formula for latency budget on the sap = Admin MBS x 8= Value, Value/Shaping Rate
-```
 
 
 The is the display of Queue 3 buffer allocation.
     Queue : 7000->esat-1/1/1:10->3
-    
-===============================================================================
+```    
+= ==============================================================================
 FC Map             : af
 Dest Slot          : N/A                Dest FP/TAP      : N/A
 Queue Type         : best-effort
@@ -542,8 +543,9 @@ Slope              : not-applicable
 Burst Ctrl Grp     : 1/1-40ms (egress)  Visitation Time  : 40ms
 Admin Burst Limit  : default            Oper Burst Limit : 6 KB
 Admin Burst FIR    : default            Oper Burst FIR   : 0 KB
-===============================================================================
+============================================================================ ===
 ```
+
 **The above output calculation 123K x 8= 984, 984/10000= 98.4 msec. Queue 3 uses 30% of CBS. 123/40KB= 32%.**
 
 ```
