@@ -634,7 +634,7 @@ top                                **22969**                  11989723
 -- -----------------------------------------------------------------------------
 ```
 
-**The above calculation is 22970 pps. The IXIA is sending 522 byte packet plus there is 4 bytes added to each frame from the satellite. 22970 x 546(522 + 20 bytes + 4 bytes) x 8 = 100,332,960.**
+**The above calculation is 22970 pps. The IXIA is sending 522 byte packet plus there is 20 bytes overhead added plus 4 bytes to each frame from the satellite. 22970 x 546(522 + 20 bytes + 4 bytes) x 8 = 100,332,960.**
 
 
 3) Configuration output from vprntest2 interface test1 sap esat-1/1/2:30.
