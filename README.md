@@ -794,7 +794,8 @@ The following test was performed to show that the scheduler is working correctly
  With 80M of traffic we can see that cir-level is being consumed correct with the scheduler.
  
 
-<img width="370" height="187" alt="image" src="https://github.com/user-attachments/assets/d8361141-c95a-4c22-a25f-53248d6e558c" />
+<img width="517" height="210" alt="image" src="https://github.com/user-attachments/assets/ab551ebb-12be-40ae-a573-157fdd26d8a2" />
+
 
 
 
