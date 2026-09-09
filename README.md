@@ -23,7 +23,8 @@ NOTE: This github does not replace NOKIA official documentation, please see the 
 
 # 0. Release information and Topology
 
-![Alt text](topology1.png)
+<img width="1282" height="805" alt="image" src="https://github.com/user-attachments/assets/a6306137-b2cb-438e-be00-020c45eb994a" />
+
 
 
 # 1. ZTP Satellite provisioning procedure 
