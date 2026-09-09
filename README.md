@@ -486,6 +486,7 @@ state/log/log-events/satellite[event=tmnxSatelliteOperStateChange]/statistics/co
 ```
 
 # 4. Qos – Buffer Allocation with various shaping rates
+
 The 7750-SR-2s with a satellite assigns the buffer allocation based on the sap-egress policy the same as with any MDA. The allocation will be assigned on the "host port" on behalf of the esat port.
 
 ```
@@ -522,8 +523,11 @@ The 7750-SR-2s with a satellite assigns the buffer allocation based on the sap-e
 ```
 The formula for latency budget on the sap = Admin MBS x 8= Value, Value/Shaping Rate
 ```
+
+
 The is the display of Queue 3 buffer allocation.
     Queue : 7000->esat-1/1/1:10->3
+    
 ===============================================================================
 FC Map             : af
 Dest Slot          : N/A                Dest FP/TAP      : N/A
@@ -550,9 +554,11 @@ Admin Burst FIR    : default            Oper Burst FIR   : 0 KB
     /configure service vprn "testvprn1" interface "test2" sap esat-1/1/1:20 egress qos scheduler-policy policy-name "shaper-access-100M"
     /configure service vprn "testvprn1" interface "test2" sap esat-1/1/1:20 egress filter ip "sat-testing"
 ```
+
  This is the output for test2 interface in testvprn1 for Queue 4.
 
 Queue : 7000->esat-1/1/1:20->4
+
 = ==============================================================================
 FC Map             : l1
 Dest Slot          : N/A                Dest FP/TAP      : N/A
@@ -568,6 +574,7 @@ Burst Ctrl Grp     : 1/1-20ms (egress)  Visitation Time  : 20ms
 Admin Burst Limit  : default            Oper Burst Limit : 32 KB
 Admin Burst FIR    : default            Oper Burst FIR   : 0 KB
 =============================================================================== ==
+
 
 **The above output calculation 6144 x 8= 49,152, 49152/100000= 492 msecs. Queue 4 uses 5% of CBS. 312/6144= 5%.**
 
