@@ -789,12 +789,12 @@ The following test was performed to show that the scheduler is working correctly
 
 **CIR amounts for all queues equal 100%. If each queue is receiving 10M the cir-level should all be consumed with no traffic left for above-cir**
 
-<img width="268" height="176" alt="image" src="https://github.com/user-attachments/assets/c2e8707e-40ed-4618-9f63-82f45dd86b74" />
+![Alt text](image1.png)
 
  With 80M of traffic we can see that cir-level is being consumed correct with the scheduler.
  
 
-<img width="517" height="210" alt="image" src="https://github.com/user-attachments/assets/ab551ebb-12be-40ae-a573-157fdd26d8a2" />
+![Alt text](image2.png)
 
 
 
