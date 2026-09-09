@@ -507,8 +507,8 @@ The Sap Configuration of TestVPRN1 interface test1 and sap esat-1/1/1
     sap esat-1/1/1:10 egress filter ip "sat-testing"
 ```
 
-
-The formula for latency budget on the sap = Admin MBS x 8= Value, Value/Shaping Rate
+```
+**The formula for latency budget on the sap = Admin MBS x 8= Value, Value/Shaping Rate**
 
 The is the display of Queue 3 buffer allocation.
     Queue : 7000->esat-1/1/1:10->3
