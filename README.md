@@ -5,11 +5,11 @@
 
 [1. ZTP Satellite provisioning procedure](#1-ztp-satellite-provisioning-procedure)
 
-[2. Port Configuration and Mapping](#2-port-configuration-and-mapping) 
+
 
 [3. Logging and Alarms of Satellite and esat ports](#3-logging-and-Alarms-of-satellite)
 
-[4. esat ports in VPRN as SAP.](#4-esat-ports-in-VPRN-as-SAP)
+[2. esat ports Mapping and Configuration in VPRN as SAP](#2-esat-ports-mapping-and-configuration-in-vprn-as-sap)
    
 [5. Qos – Buffer Allocation with various shaping rates](#5-qos--buffer-allocation-with-various-shaping-rates)
    
@@ -163,7 +163,7 @@ Hardware Data
 ```
 
 
-# 2. esat ports mapping and configuration in VPRN as SAP
+# 2. esat ports Mapping and Configuration in VPRN as SAP
 Once the 7250-IXR-s has been provisioned as a satellite the ports can be viewed and configured as regular 7750-SR ports.
 ```
 show port
