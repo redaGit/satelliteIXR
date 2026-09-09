@@ -490,7 +490,6 @@ state/log/log-events/satellite[event=tmnxSatelliteOperStateChange]/statistics/co
 
 The 7750-SR-2s with a satellite assigns the buffer allocation based on the sap-egress policy the same as with any MDA. The allocation will be assigned on the "host port" on behalf of the esat port.
 
-```
 <img width="605" height="227" alt="image" src="https://github.com/user-attachments/assets/44d7c8d0-7979-4acd-a479-5e6b8f069612" />
 
 ```
