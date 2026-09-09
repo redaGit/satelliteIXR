@@ -512,8 +512,7 @@ The formula for latency budget on the sap = Admin MBS x 8= Value, Value/Shaping 
 
 The is the display of Queue 3 buffer allocation.
     Queue : 7000->esat-1/1/1:10->3
-    
-```    
+       
 = ==============================================================================
 FC Map             : af
 Dest Slot          : N/A                Dest FP/TAP      : N/A
