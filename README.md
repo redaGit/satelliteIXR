@@ -491,16 +491,7 @@ state/log/log-events/satellite[event=tmnxSatelliteOperStateChange]/statistics/co
 The 7750-SR-2s with a satellite assigns the buffer allocation based on the sap-egress policy the same as with any MDA. The allocation will be assigned on the "host port" on behalf of the esat port.
 
 ```
-| Queue #|	PIR     |	CIR    | MBS     |	CBS       |  cir-level  |	cir-weight     |
-|-------:|---------:|---------:|--------:|------------:|-------------:|---------------:|
-|Q1	   | PIR 100% |   CIR 15%| MBS 100%|	CBS 15%   |	 4           |	15             |                
-|Q2	   | PIR 100% |	CIR 20%|MBS 100% |	CBS 20%   |  4           | 20             |	            
-|Q3	   | PIR 100% |	CIR 30%|MBS 100% |	CBS 30%   |  4           |	30             |
-|Q4	   | PIR 100% |	CIR 5% |MBS 100% |	CBS 5%    |	 1           |	5              |
-|Q5	   | PIR 100% |	CIR 10%|MBS 100% |	CBS 10%   |  4           |	10             |
-|Q6	   | PIR 100% |	CIR 10%|MBS 100% |	CBS 10%   |  6           | 10             |
-|Q7	   | PIR 100% |	CIR 5% |MBS 100% |	CBS 5%    |	 4           |	5              |
-|Q8	   | PIR 100% |	CIR 5% |MBS 100% |	CBS 5%    |  7           |	5              |
+<img width="605" height="227" alt="image" src="https://github.com/user-attachments/assets/44d7c8d0-7979-4acd-a479-5e6b8f069612" />
 
 ```
 
