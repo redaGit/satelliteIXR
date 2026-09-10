@@ -593,15 +593,10 @@ At time t = 33 sec (Mode: Rate)
 Egress Schedulers
 top                                **2301**                   1200910
 
-- ------------------------------------------------------------------------------
-At time t = 44 sec (Mode: Rate)
-- - -----------------------------------------------------------------------------
-Egress Schedulers
-top                                **2299**                   1199943
 
 ```
 
-**The above calculation is 2301 pps. The IXIA is sending 522 byte packet plus there is 20 bytes overhead added plus 4 bytes to each frame from the satellite. 2301 x 546(522 + 20 bytes + 4 bytes) x 8 = 10,050,768.**
+**The above calculation is 2301 pps. The IXIA is sending 522 byte packet plus there is 20 bytes overhead added plus 4 bytes to each frame from the satellite. 2301 x 542 (522 + 20 bytes) x 8 = 9,977,136.**
 
  
 2) Configuration output from testvprn1 interface test2 sap esat-1/1/1:20.
@@ -634,7 +629,7 @@ top                                **22969**                  11989723
 -- -----------------------------------------------------------------------------
 ```
 
-**The above calculation is 22970 pps. The IXIA is sending 522 byte packet plus there is 20 bytes overhead added plus 4 bytes to each frame from the satellite. 22970 x 546(522 + 20 bytes + 4 bytes) x 8 = 100,332,960.**
+**The above calculation is 22970 pps. The IXIA is sending 522 byte packet plus there is 20 bytes overhead added plus 4 bytes to each frame from the satellite. 22970 x 542(522 + 20 bytes) x 8 = 99,597,920.**
 
 
 3) Configuration output from vprntest2 interface test1 sap esat-1/1/2:30.
@@ -653,10 +648,7 @@ top                                **22969**                  11989723
 monitor qos scheduler-stats sap "esat-1/1/2:30" egress rate
 ```
 -- -----------------------------------------------------------------------------
-Egress Schedulers
-top                                **11498**                  6001766
 
- -----------------------------------------------------------------------------
 At time t = 33 sec (Mode: Rate)
 -- -----------------------------------------------------------------------------
 Egress Schedulers
@@ -664,7 +656,7 @@ top
                                      **11496**                  6001007
 
                                   
-**The above calculation is 11496 pps. The IXIA is sending 522 byte packet plus there is 4 bytes added to each frame from the satellite. 11496 x 546(522 + 20 bytes + 4 bytes) x 8 = 50,223,264.**
+**The above calculation is 11496 pps. The IXIA is sending 522 byte packet plus there is 4 bytes added to each frame from the satellite. 11496 x 542 (522 + 20 bytes) x 8 = 49,846,656.**
 
 end
 
